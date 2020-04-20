@@ -1,0 +1,18 @@
+.c-nav-link {
+    display: -webkit-box!important;
+}
+
+.c-left-button {
+    float:left!important;
+    width:48%!important;
+    text-align:center!important;
+}
+.c-right-button {
+    margin-top: 0px !important;
+    float:right!important;
+    width:48%!important;
+    text-align:center!important;
+}
+.c-table-center-text {
+    text-align: center !important;
+}
