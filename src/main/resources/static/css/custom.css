@@ -16,3 +16,19 @@
 .c-table-center-text {
     text-align: center !important;
 }
+.note-editor.note-frame .note-editing-area .note-editable, .note-editor.note-airframe .note-editing-area .note-editable {
+    background-color: #fff;
+    color: #000;
+    padding: 10px;
+    overflow: auto;
+    word-wrap: break-word;
+    height: 200px!important;
+}
+.c-card {
+    position:fixed!important;
+    width: 40%;
+    left:50% !important;
+    top:50% !important;
+    transform:translate(-50%,-50%) !important;
+    z-index:1000!important;
+}

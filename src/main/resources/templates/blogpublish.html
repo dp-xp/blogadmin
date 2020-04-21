@@ -63,7 +63,7 @@
         <ul class="navbar-nav ml-auto">
             <!-- Messages Dropdown Menu -->
             <li>
-                <a href="pages/widgets.html" class="nav-link c-nav-link">
+                <a href="blogpublish.html" class="nav-link c-nav-link">
                     <i class="nav-icon fas fa-upload"></i>&nbsp;&nbsp;
                     <p>发布</p>
                 </a>
@@ -91,7 +91,7 @@
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="index.html" class="nav-link">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
                                 首页
@@ -100,7 +100,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="pages/widgets.html" class="nav-link">
+                        <a href="blogadmin.html" class="nav-link">
                             <i class="nav-icon fas fa-folder"></i>
                             <p>
                                 博客管理
@@ -109,7 +109,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="pages/widgets.html" class="nav-link">
+                        <a href="types.html" class="nav-link">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                                 分类管理
@@ -118,7 +118,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="pages/widgets.html" class="nav-link">
+                        <a href="tags.html" class="nav-link">
                             <i class="nav-icon fas fa-tags"></i>
                             <p>
                                 标签管理
@@ -127,7 +127,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="pages/widgets.html" class="nav-link">
+                        <a href="user.html" class="nav-link">
                             <i class="nav-icon fas fa-user"></i>
                             <p>
                                 用户管理
@@ -162,15 +162,46 @@
         <!-- /.content-header -->
 
         <!-- Main content -->
-
-
-
-
-        
-
-
-
-
+        <section class="content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-outline card-info">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                编辑博客
+                            </h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body pad">
+                            <div class="mb-3">
+                                <form action="/publish" method="post">
+                                    <input type="hidden" name="questionId" >
+                                    <div class="form-group">
+                                        <label for="title">博客标题</label>
+                                        <input type="text" class="form-control" name="title" id="title"
+                                               placeholder="问题标题...">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>博客内容</label>
+                                        <textarea class="textarea" placeholder="Place some text here"
+                                                  style="width: 100%; height: 400px; font-size: 14px; line-height: 18px;
+                                          border: 1px solid #dddddd; padding: 10px;"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="tag">博客标签</label>
+                                        <input type="text" class="form-control" name="tag" id="tag"
+                                               placeholder="输入标签，以,分隔">
+                                    </div>
+                                    <button type="submit" style="float: right" class="btn btn-success" id="submit">发布</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-->
+            </div>
+            <!-- ./row -->
+        </section>
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
@@ -224,5 +255,11 @@
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+<script>
+    $(function () {
+        // Summernote
+        $('.textarea').summernote()
+    })
+</script>
 </body>
 </html>
